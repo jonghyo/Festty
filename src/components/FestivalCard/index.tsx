@@ -18,9 +18,13 @@ const FestivalCard = ({
 	imageUrl,
 }: FestivalCardProps) => {
 	return (
-		<div className='card bg-base-100 w-96 shadow-xl'>
+		<div className='card bg-base-100 w-full h-fit shadow-xl'>
 			<figure>
-				<img src={imageUrl} alt='festival' />
+				<img
+					src={imageUrl}
+					alt='festival'
+					className='h-80 w-full object-cover'
+				/>
 			</figure>
 			<div className='card-body'>
 				<h2 className='card-title'>{title}</h2>

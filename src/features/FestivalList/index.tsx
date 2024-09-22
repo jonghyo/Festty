@@ -4,9 +4,13 @@ import FestivalCard from '@/components/FestivalCard'
 const FestivalList = () => {
 	return (
 		<div>
-			{dummyCardData.map((card) => (
-				<FestivalCard key={card.id} {...card} />
-			))}
+			<div className='carousel w-full h-full'>
+				{dummyCardData.map((card) => (
+					<div key={card.id} className='carousel-item w-full h-full'>
+						<FestivalCard {...card} />
+					</div>
+				))}
+			</div>
 		</div>
 	)
 }
