@@ -1,12 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import Splash from '@/features/Splash'
 import FestivalList from '@/features/FestivalList'
 import Profile from '@/features/Profile'
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <div>hello, world</div>,
+		element: <Splash />,
 	},
 	{
 		path: '/festival',
