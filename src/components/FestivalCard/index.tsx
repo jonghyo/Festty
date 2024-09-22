@@ -1,3 +1,5 @@
+import { GiJapan, GiCalendar } from 'react-icons/gi'
+
 type FestivalCardProps = {
 	id: string
 	title: string
@@ -14,16 +16,33 @@ const FestivalCard = ({
 	place,
 	season,
 	imageUrl,
-	createdAt,
 }: FestivalCardProps) => {
 	return (
-		<div>
-			<h2>{title}</h2>
-			<p>{description}</p>
-			<p>{place}</p>
-			<p>{season}</p>
-			<img src={imageUrl} alt={title} width={'100%'} />
-			<p>{createdAt}</p>
+		<div className='card bg-base-100 w-full h-fit shadow-xl'>
+			<figure>
+				<img
+					src={imageUrl}
+					alt='festival'
+					className='h-80 w-full object-cover'
+				/>
+			</figure>
+			<div className='card-body'>
+				<h2 className='card-title'>{title}</h2>
+				<p>{description}</p>
+				<p className='flex items-center gap-2'>
+					<GiJapan />
+					{place}
+				</p>
+				<p className='flex items-center gap-2'>
+					<GiCalendar />
+					{season}
+				</p>
+				<div className='card-actions justify-end'>
+					<button type='button' className='btn btn-primary'>
+						Rate
+					</button>
+				</div>
+			</div>
 		</div>
 	)
 }
