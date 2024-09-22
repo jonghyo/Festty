@@ -11,10 +11,10 @@
     "lint": "biome lint ./src",
     "lint:fix": "biome lint --apply ./src",
     "format": "biome format --write ./src",
-    "check": "biome check --apply ./src"
+    "check": "biome check --apply ./src",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@tanstack/react-router": "^1.58.3",
     "@tauri-apps/api": ">=2.0.0-rc.0",
     "@tauri-apps/plugin-shell": ">=2.0.0-rc.0",
     "react": "^18.2.0",
@@ -22,13 +22,25 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
-    "@tanstack/router-devtools": "^1.58.3",
-    "@tanstack/router-plugin": "^1.58.4",
+    "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
     "@tauri-apps/cli": ">=2.0.0-rc.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.10",
+    "secretlint": "^8.2.4",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-tsconfig-paths": "^5.0.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx, js, jsx, json}": [
+      "biome format --write ./src",
+      "biome lint ./src"
+    ],
+    "*": [
+      "secretlint --maskSecrets --secretlintignore .gitignore '**/*'"
+    ]
   }
 }
