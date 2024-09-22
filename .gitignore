@@ -23,4 +23,15 @@ dist-ssr
 *.sln
 *.sw?
 
+# tauri
 src-tauri/gen/*
+src-tauri/target/*
+
+# miscellaneous
+/.vs
+.DS_Store
+.Thumbs.db
+*.sublime*
+.idea
+debug.log
+TODO.md
