@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --apply ./src",
+    "format": "biome format --write ./src",
+    "check": "biome check --apply ./src"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.58.3",
@@ -17,6 +21,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.2",
     "@tanstack/router-devtools": "^1.58.3",
     "@tanstack/router-plugin": "^1.58.4",
     "@tauri-apps/cli": ">=2.0.0-rc.0",
