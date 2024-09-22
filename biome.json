@@ -21,14 +21,23 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error"
+      }
     }
   },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
       "jsxQuoteStyle": "single",
-      "semicolons": "asNeeded"
+      "semicolons": "asNeeded",
+      "quoteProperties": "asNeeded"
+    }
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
     }
   }
 }
