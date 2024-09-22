@@ -1,3 +1,5 @@
+![Github Actions](https://github.com/jonghyo/Festty/actions/workflows/firebase-hosting-merge.yml/badge.svg)
+
 # Festty
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
