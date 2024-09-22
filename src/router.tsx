@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import FestivalList from '@/features/FestivalList'
+import Profile from '@/features/Profile'
 
 const router = createBrowserRouter([
 	{
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
 	{
 		path: '/festival',
 		element: <FestivalList />,
+	},
+	{
+		path: '/profile',
+		element: <Profile />,
 	},
 ])
 
