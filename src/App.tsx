@@ -1,6 +1,8 @@
+import Router from './router';
+
 const App = () => {
   return (
-    <div>Hello, world</div>
+    <Router />
   );
 };
 
