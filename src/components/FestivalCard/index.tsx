@@ -8,6 +8,7 @@ type FestivalCardProps = {
 	season: string
 	imageUrl: string
 	createdAt: string
+	handleRateClick: () => void
 }
 
 const FestivalCard = ({
@@ -16,6 +17,7 @@ const FestivalCard = ({
 	place,
 	season,
 	imageUrl,
+	handleRateClick,
 }: FestivalCardProps) => {
 	return (
 		<div className='card bg-base-100 w-full h-fit shadow-xl'>
@@ -38,8 +40,12 @@ const FestivalCard = ({
 					{season}
 				</p>
 				<div className='card-actions justify-end'>
-					<button type='button' className='btn btn-primary'>
-						Rate
+					<button
+						type='button'
+						className='btn btn-accent text-white'
+						onClick={handleRateClick}
+					>
+						評価する
 					</button>
 				</div>
 			</div>
