@@ -11,6 +11,15 @@ const FestivalList = () => {
 		setIsRateDialogVisible(true)
 	}
 
+	const hideRateDialog = () => {
+		setIsRateDialogVisible(false)
+	}
+
+	const saveRating = () => {
+		// TODO: 評価を保存する
+		hideRateDialog()
+	}
+
 	return (
 		<div>
 			<div className='carousel w-full h-full'>
@@ -22,7 +31,10 @@ const FestivalList = () => {
 			</div>
 
 			{isRateDialogVisible && (
-				<RateDialog handleSaveClick={() => setIsRateDialogVisible(false)} />
+				<RateDialog
+					handleCloseClick={hideRateDialog}
+					handleSaveClick={saveRating}
+				/>
 			)}
 		</div>
 	)
