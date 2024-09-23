@@ -40,6 +40,7 @@ const FestivalCard = ({
 					{season}
 				</p>
 				<div className='card-actions justify-end'>
+					{/* TODO: 過去に評価済みの場合はここに本人の評価を表示させる */}
 					<button
 						type='button'
 						className='btn btn-accent text-white'
