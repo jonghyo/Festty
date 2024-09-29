@@ -38,7 +38,7 @@ const RateDialog = ({ handleCloseClick, handleSaveClick }: RateDialogProps) => {
 							</svg>
 						</button>
 					</div>
-					<div className='flex text-5xl gap-1 pb-6 justify-center'>
+					<div className='flex text-5xl gap-1 py-6 justify-center'>
 						<GiRoundStar
 							className={starColor(1)}
 							onClick={() => setRating(1)}
